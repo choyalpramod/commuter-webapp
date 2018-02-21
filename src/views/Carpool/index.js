@@ -206,7 +206,7 @@ class Carpool extends Component {
         if(this.state.tripCreated)
             return <RideConfirmed 
                 label="You have successfully created a trip!"
-                closeWindow={()=>this.setState({rideConfirmed: false})} />
+                closeWindow={()=>this.setState({tripCreated: false})} />
         else null;
     }
 
@@ -254,6 +254,8 @@ class Carpool extends Component {
                 {list.map((cab) =>{
                     cab.name = details[cab.email].fullName;
                     cab.car = details[cab.email].car;
+                    console.log('selectedIndex ',selectedIndex);
+                    console.log('cab ',cab.key,'\n',cab);
                     return(
                         <AvailableCab
                             key={cab.email} 
@@ -272,8 +274,7 @@ class Carpool extends Component {
         if(this.state.rideConfirmed)
             return <RideConfirmed 
                 label="You have successfully book the pool cab!"
-                closeWindow={()=>this.setState({rideConfirmed: false})}
-                 />
+                closeWindow={()=>this.setState({rideConfirmed: false})}/>
         else return null;
     }
 

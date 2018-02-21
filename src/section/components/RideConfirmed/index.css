@@ -1,7 +1,7 @@
 .confirmed-popup{
-  height: 500px;
   max-height: 80%;
-  width: 500px;
+  height: 300px;
+  width: 300px;
   max-width: 80%;
   border: 1px solid #eee;
   position: fixed;
@@ -10,6 +10,7 @@
   transform: translate(-50%, -50%);
   background-color: white;
   z-index: 5;
+  padding: 20px;
 }
 
 .confirmed-popup .fa-times{
@@ -54,7 +55,7 @@
 }
 
 .checkmark.draw:after{
-  animation-duration: 800ms;
+  animation-duration: 2000ms;
   animation-timing-function: ease;
   animation-name: checkmark;
   transform: scaleX(-1) rotate(135deg);
