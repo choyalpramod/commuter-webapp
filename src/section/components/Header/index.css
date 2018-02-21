@@ -1,0 +1,46 @@
+body{
+    padding-top: 56px;
+}
+.header{
+    padding: 8px;
+    box-shadow: 0px 1px 6px #ccc;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+}
+.header .logo{
+    float: left;
+    width: 40px;
+}
+.header .header-title{
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: sans-serif;
+    line-height: 40px;
+    color: #655f5f;
+}
+.header-user{
+    float: right;
+    width: 40px;
+}
+.header-user i{
+    font-size: 28px;
+    line-height: 40px;
+}
+.header{
+    background-color: white;
+}
+.header .logout{
+    background-color: white;
+    position: absolute;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    padding: 5px;
+    right: 5px;
+    box-shadow: 0px 1px 6px #ccc;
+    font-size: 12px;
+    cursor: pointer;
+}

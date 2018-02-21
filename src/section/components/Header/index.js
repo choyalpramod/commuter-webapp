@@ -26,20 +26,26 @@ class Header extends React.Component {
         let { activeUser, label } = this.props;
         return (
             <div className="header full-width">
-                <img src={'assets/img/logo.png'}/>
-                <div className="">{label}</div>
+                <img 
+                    className="logo" 
+                    src={'assets/img/logo.png'}/>
                 {(activeUser && Object.keys(activeUser).length > 0) && 
-                    <div className="">
-                        <i className="fa fa-user-o" onClick={()=>{
+                    <div className="header-user text-align-center">
+                        <i className="fa fa-user cursor-pointer" onClick={()=>{
                             this.setState({
                                 showLogout: !this.state.showLogout
                             });
                         }}></i>
                         {this.state.showLogout &&
-                            <div onClick={this.logout.bind(this)}>Logout</div>
+                            <div
+                                className="logout" 
+                                onClick={this.logout.bind(this)}>
+                            Logout
+                            </div>
                         }
                     </div>
                 }
+                <div className="header-title">{label}</div>
             </div>
         )
     }

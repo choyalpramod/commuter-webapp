@@ -1,84 +1,105 @@
-  $brand-success: #5cb85c;
-  $loader-size: 8em;
-  $check-height: $loader-size/2;
-  $check-width: $check-height/2;
-  $check-left: ($loader-size/6 + $loader-size/12);
-  $check-thickness: 2px;
-  $check-color: $brand-success;
-  
-  .circle-loader {
-    margin: 0 0 30px 10px;
-    border: $check-thickness solid rgba(0, 0, 0, 0.2);
-    border-left-color: $check-color;
-    position: relative;
-    display: inline-block;
-    vertical-align: top;
+.confirmed-popup{
+  height: 500px;
+  max-height: 80%;
+  width: 500px;
+  max-width: 80%;
+  border: 1px solid #eee;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  z-index: 5;
+}
+
+.confirmed-popup .fa-times{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  color: grey;
+  font-size: 30px;
+  padding: 4px;
+}
+
+.model{
+  position: fixed;
+  background-color: black;
+  opacity: 0.8;
+  z-index: 4;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+.confirmed-popup .msg{
+  padding: 30px 0;
+  color: #b57676;
+}
+
+
+.circle-loader {
+  margin: 0 0 30px 10px;
+  border: 2px solid #5cb85c;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.circle-loader,
+.circle-loader:after {
+  border-radius: 50%;
+  width: 8em;
+  height: 8em;
+}
+
+.checkmark.draw:after{
+  animation-duration: 800ms;
+  animation-timing-function: ease;
+  animation-name: checkmark;
+  transform: scaleX(-1) rotate(135deg);
+}
+.checkmark:after {
+  opacity: 1;
+  height: 4em;
+  width: 2em;
+  transform-origin: left top;
+  border-right: 2px solid #5cb85c;
+  border-top: 2px solid #5cb85c;
+  content: '';
+  left: 1.99em;
+  top: 4em;
+  position: absolute;
+}
+
+@keyframes loader-spin {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  .circle-loader,
-  .circle-loader:after {
-    border-radius: 50%;
-    width: $loader-size;
-    height: $loader-size;
+  100% {
+    transform: rotate(360deg);
   }
-  
-  .load-complete {
-    -webkit-animation: none;
-    animation: none;
-    border-color: $check-color;
-    transition: border 500ms ease-out;
+}
+
+@keyframes checkmark {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 1;
   }
-  
-  .checkmark {
-    &.draw:after {
-      animation-duration: 800ms;
-      animation-timing-function: ease;
-      animation-name: checkmark;
-      transform: scaleX(-1) rotate(135deg);
-    }
-    
-    &:after {
-      opacity: 1;
-      height: $check-height;
-      width: $check-width;
-      transform-origin: left top;
-      border-right: $check-thickness solid $check-color;
-      border-top: $check-thickness solid $check-color;
-      content: '';
-      left: $check-left;
-      top: $check-height;
-      position: absolute;
-    }
+  20% {
+    height: 0;
+    width: 2em;
+    opacity: 1;
   }
-  
-  @keyframes loader-spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+  40% {
+    height: 4em;
+    width: 2em;
+    opacity: 1;
   }
-  
-  @keyframes checkmark {
-    0% {
-      height: 0;
-      width: 0;
-      opacity: 1;
-    }
-    20% {
-      height: 0;
-      width: $check-width;
-      opacity: 1;
-    }
-    40% {
-      height: $check-height;
-      width: $check-width;
-      opacity: 1;
-    }
-    100% {
-      height: $check-height;
-      width: $check-width;
-      opacity: 1;
-    }
+  100% {
+    height: 4em;
+    width: 2em;
+    opacity: 1;
   }
+}

@@ -1,0 +1,74 @@
+.cabs-cards{
+    width: 50%;
+    padding: 10px;
+    display: inline-block;
+}
+
+@media only screen and (max-width: 960px){
+    .cabs-cards{
+        width: 100%;
+    }    
+}
+
+.cabs-cards-inner{
+    border: 1px solid #eee;
+    box-shadow: 0px 0px 3px #ccc;
+    padding: 12px;
+}
+.for-selected{
+    display: none;
+}
+.card-selected .for-non-selected{
+    display: none;
+}
+.card-selected .for-selected{
+    display: initial;
+}
+
+.cabs-cards-inner .icon{
+    float: left;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: grey;
+    line-height: 40px;
+    text-align: center;    
+    margin-top: 8px;
+}
+.cabs-cards-inner .last-icon{
+    float: right;
+    line-height: 40px;
+    width: 60px;
+}
+
+.cabs-cards-inner .icon i{
+    color: white;
+}
+
+.card-selected .cabs-cards-inner .icon{
+    background-color: white;
+} 
+.card-selected .cabs-cards-inner .icon i{
+    color: grey;
+}
+.cabs-cards-inner .content{
+    margin-left: 40px;
+    margin-right: 60px;
+    padding-left: 8px;
+}
+.additional-info{
+    font-size: 12px;
+    color: #b1a2a2;    
+}
+.fa.fa-phone{
+    font-size: 28px;
+    margin-top: 8px;
+    color: rgb(19, 149, 24);
+}
+.card-selected .cabs-cards-inner{
+    background-color: rgb(153, 205, 255);
+    color: white;
+}
+.card-selected .additional-info{
+    color: white;
+}

@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    margin: 0px;
+}
+.full-width{
+    width: 100%;
+    float: left;
+    display: inline-block;   
+}
+.text-align-center{
+    text-align: center;
+}
+button.button-btn{
+    padding: 8px;
+    min-width: 80px;
+    border-radius: 3px;
+    border: 0px;
+    color: white;    
+    background-color: rgb(20, 153, 210);
+}
+button.button-btn[disabled],
+button.button-btn[disabled='disabled'],
+button.button-btn[disabled='true']{
+    background-color: rgb(211, 220, 224);    
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.font-12{
+    font-size: 12px;
+}
+.padding-v-2{
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.font-bold{
+    font-weight: bold;
+}
+.line-height-nrml{
+    line-height: normal !important;
+}

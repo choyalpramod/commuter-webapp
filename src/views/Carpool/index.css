@@ -1,0 +1,39 @@
+body{
+    padding-bottom: 60px;
+}
+
+.footer{
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    height: 60px;
+    line-height: 60px;
+    bottom: 0px;
+    left: 0px;
+    box-shadow: 1px -1px 5px #ccc;
+}
+
+.no-cabs-available{
+    padding: 30px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #7b7bb1;    
+}
+
+.available-cards-parent{
+    width: 100%;
+    display: inline-block;
+    padding: 0 200px;
+}
+
+@media only screen and (max-width: 960px){
+    .available-cards-parent{
+        padding: 0 100px;
+    }    
+}
+
+@media only screen and (max-width: 767px){
+    .available-cards-parent{
+        padding: 0 20px;
+    }    
+}

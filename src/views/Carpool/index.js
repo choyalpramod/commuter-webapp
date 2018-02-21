@@ -194,17 +194,19 @@ class Carpool extends Component {
         let { user: {details}, activeUser } =  this.props;
         if(details[activeUser.email].trip)
             return(
-                <div className="">You have already created today's trip</div>
+                <div className="text-align-center no-cabs-available">You have already created today's trip</div>
             )
         else
             return(
-                <div className="">Please create today's trip</div>
+                <div className="text-align-center no-cabs-available">Please create today's trip</div>
             )
     }
 
     getTripCreatedSuccess(){
         if(this.state.tripCreated)
-            return <RideConfirmed label="You have successfully created a trip!" />
+            return <RideConfirmed 
+                label="You have successfully created a trip!"
+                closeWindow={()=>this.setState({rideConfirmed: false})} />
         else null;
     }
 
@@ -226,7 +228,7 @@ class Carpool extends Component {
             return null;
         else
             return (
-                <div className="">
+                <div className="text-align-center footer">
                     <button {...attr}>POOL YOUR CAR</button>
                 </div>
             )
@@ -237,7 +239,7 @@ class Carpool extends Component {
 
         if(details[activeUser.email].hasBookedCab){
             return (
-                <div>You have already booked a cab, please use different account to book a cab.</div>
+                <div className="text-align-center no-cabs-available">You have already booked a cab, please use different account to book a cab.</div>
             )
         }
         else{
@@ -245,10 +247,10 @@ class Carpool extends Component {
                 { selectedIndex } = this.state; 
 
             if(!(list && list.length > 0)){
-                return <div>No Cabs available</div>
+                return <div className="text-align-center no-cabs-available">No Cabs available</div>
             }
             return(
-                <div>
+                <div className="available-cards-parent">
                 {list.map((cab) =>{
                     cab.name = details[cab.email].fullName;
                     cab.car = details[cab.email].car;
@@ -268,7 +270,10 @@ class Carpool extends Component {
 
     getCabConfirmed(){
         if(this.state.rideConfirmed)
-            return <RideConfirmed label="You have successfully book the pool cab!" />
+            return <RideConfirmed 
+                label="You have successfully book the pool cab!"
+                closeWindow={()=>this.setState({rideConfirmed: false})}
+                 />
         else return null;
     }
 
@@ -277,6 +282,7 @@ class Carpool extends Component {
         
         let buttonAttr = {
             type: 'button',
+            className: 'button-btn',
             onClick: this.confirmRide.bind(this)
         },{ 
             selectedIndex 
@@ -286,7 +292,7 @@ class Carpool extends Component {
             buttonAttr.disabled = true;
         }
         return(
-            <div className="">
+            <div className="text-align-center footer">
                 <button {...buttonAttr}>CONFIRM RIDE</button>
             </div>    
         )

@@ -11,6 +11,7 @@ import promise from 'redux-promise';
 import {createLogger} from 'redux-logger';
 import Reducers from './section/Reducers';
 import * as constants from './section/constants/constants';
+import './index.css';
 
 var ReactRouter = require('react-router-dom');
 var Router = ReactRouter.BrowserRouter;
