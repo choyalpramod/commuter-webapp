@@ -1,0 +1,28 @@
+{
+  "name": "commuter",
+  "description": "Commuter webapp",
+  "version": "0.0.16",
+  "dependencies": {
+    "lodash": "^4.17.5",
+    "react": "16.0.0",
+    "react-dom": "16.0.0",
+    "react-google-maps": "9.4.3",
+    "recompose": "0.26.0",
+    "react-redux": "^5.0.5",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
+    "redux": "^3.7.1",
+    "redux-logger": "^3.0.6",
+    "redux-promise": "^0.5.3",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

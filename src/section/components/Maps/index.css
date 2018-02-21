@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box;
+}
+.search-block{
+    padding: 10px 5px;
+}
+.search-child{
+    background-color: white;
+    padding: 15px;
+    box-shadow: 1px 1px 5px #ccc;
+}
+.search-child input{
+    width: 100%;
+    border: 0px;
+    border-bottom: 1px solid #ccc;
+    padding: 4px 0;    
+}
